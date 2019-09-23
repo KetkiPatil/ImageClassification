@@ -1,0 +1,48 @@
+The Folder contains training and testing dataset in Train and Test folders respectively.
+Each subfolder in Train directory contains 4 classes - A,B,C,D with their annotations as bounding box in labels.txt
+
+The format of annotations is as follows:
+
+> path/to/image.jpg,x1,y1,x2,y2,class_name
+
+where x1,y1 represents the top left coordinate of the BBox and x2,y2 represents the bottom right coordinate of the BBox.
+
+
+The task is to train a deep learning model using any of the frameworks like pytorch,tensorflow,keras etc which can classify the images in one of the category as A,B,C,D
+
+Moreover, the candidate is expected to evaluate their trained model on the images present in the subfolders t1,t2,t3 and t4 of Test folder.
+
+The candidate should output results for the images in the folders t1,t2,t3 and t4 by drawing bounding box around the object with name of the class written on each image.
+The images should be written in the same folder t1,t2,t3,t4 with the prefix "pred_"  before it.
+
+For example:
+
+
+If the Image in t1 folder is pic_0000.jpg, then the result should be saved in the image as pred_pic_0000.jpg with Bounding box around the region of interest and Class Name mentioned in clear font.
+
+
+The candidate should only use deep learning architectures to train the model.
+
+To move into further rounds, the candidate is expected to get an accuracy above 30% on the images in the Test folder of the provided dataset.
+
+The accuracy for this round will be measured by the following performance metric: 
+(Total No of Truly classified Images/ Total No of Images) *100
+
+ in each of sub folders t1,t2,t3 and t4. An aggregate average of the accuracy across t1,...t4 must be 
+greater than 30%. 
+
+Please note, the recruiter has maintained the labelling of each image inside t1,t2,t3 and t4 and will inspect the results based upon the manual inspection of output images with prefix "pred_" followed by image names written in each of folders(t1.. t4).
+
+-------------------------------------------------------
+Apart from the above results the candidate must send all the related codes used to train and test the model in an organized way. Any programming language and Deep Learning platform are acceptable. Please attach a Readme file with the solutions with any relevant notes and the detailed summary of process(preprocessing/training/DL architecture, hyper parameters etc) used to reach to the solution.
+
+
+P.S: Candidate who has used DL architectures other than tensorflow's object detection api will be given more preference.
+
+
+Best of Luck,
+
+
+Suraj,
+Artificial Intelligence Lead,
+Bizlers Technologies
